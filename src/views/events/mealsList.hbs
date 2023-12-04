@@ -1,0 +1,60 @@
+<!-- Tu archivo Handlebars HTML -->
+<header class="masthead d-flex">
+    <div class="container text-center my-auto">
+        <h1 class="mb-1">Eventos Ciencias de la Computacion</h1>
+        <h3 class="mb-5">
+            <em>Descubre tus eventos favoritos</em>
+        </h3>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Ingresa un ingrediente...">
+            <button id="searchButton">Buscar</button>
+        </div>
+        <div id="mealList" class="meal-list"></div>
+    </div>
+    <div class="overlay"></div>
+</header>
+
+<!-- Tu script JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Espera a que el DOM esté completamente cargado
+
+        // Obtén referencia al elemento searchInput y searchButton
+        var searchInput = document.getElementById('searchInput');
+        var searchButton = document.getElementById('searchButton');
+        var mealList = document.getElementById('mealList');
+
+        // Agrega un evento click al botón de búsqueda
+        searchButton.addEventListener('click', function () {
+            // Obtén el valor del input
+            var ingredient = searchInput.value;
+
+            // Realiza la solicitud a la API
+            fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Manipula los datos de la API, por ejemplo, muestra la lista de comidas
+                    renderMealList(data.meals);
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        // Función para renderizar la lista de comidas
+        function renderMealList(meals) {
+            // Puedes personalizar esta función según la estructura de tu página
+            mealList.innerHTML = ''; // Limpiar la lista existente, si la hay
+
+            if (meals) {
+                meals.forEach(meal => {
+                    // Crea elementos HTML o realiza acciones según tus necesidades
+                    var mealItem = document.createElement('div');
+                    mealItem.textContent = meal.strMeal;
+                    mealList.appendChild(mealItem);
+                });
+            } else {
+                // Maneja el caso en que no se encuentren comidas
+                mealList.textContent = 'No se encontraron comidas con ese ingrediente.';
+            }
+        }
+    });
+</script>

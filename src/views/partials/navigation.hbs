@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/events">Mira tu evento</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Eventos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/events">Todos los Eventos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/events/add">Add a Event</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="/events/api" class="nav-link">API</a>
+          </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">Logout</a>
+          </li>                  
+        {{else}}
+          <li class="nav-item">
+            <a href="/signin" class="nav-link">Ingresar</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link">Registrarse</a>
+          </li>
+        {{/if}}        
+      </ul>
+    </div>
+  </div>
+</nav>

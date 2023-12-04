@@ -1,9 +1,7 @@
 # Índice del Proyecto
 ## Contribuidores
- - Juan Diego Huamani Vilca
  - Ricardo Alexander Rodriguez Pumacayo
- - Aroni Jarata Antony
-
+   
 ## [Trello](https://trello.com/b/lLkk7xVC/proyecto-ingeneria-de-software)
 
 ## Librerías

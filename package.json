@@ -1,31 +1,31 @@
-{
-  "name": "ingeneria-de-software-final",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.6.2",
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "express": "^4.18.2",
-    "express-handlebars": "^7.1.1",
-    "express-mysql-session": "^3.0.0",
-    "express-session": "^1.17.3",
-    "express-validator": "^7.0.1",
-    "fetch": "^1.1.0",
-    "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0",
-    "timeago.js": "^4.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+{   
+    "name": "recipebook",
+    "description": "A sample recipe book application...",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "",
+        "url": ""
+    },
+    "dependencies": {
+        "express": "4.4.4",
+        "hbs": "2.4.0",
+        "node-mysql": "0.4.2",
+        "body-parser": "1.15.2",
+        "basic-auth": "1.0.3",
+        "cookie-parser": "1.3.1",
+        "method-override": "2.0.2",
+        "errorhandler": "1.1.1",
+        "bcrypt-nodejs": "0.0.3",
+        "jquery": "3.1.1",
+        "react": "15.4.0",
+        "react-router": "3.0.0"              
+    },
+    "devDependencies": {
+        "webpack": "2.2.1",
+        "babel-core": "6.13.0",
+        "babel-loader": "6.2.4",
+        "babel-preset-es2015": "6.13.0",
+        "babel-preset-react": "6.11.1"
+    }    
 }

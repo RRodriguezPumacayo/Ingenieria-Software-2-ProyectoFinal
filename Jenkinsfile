@@ -18,6 +18,7 @@ pipeline {
         stage('Start Application'){
             steps{
                 sh 'node server'
+                sh 'nohup node server &'
             }
         }
     }

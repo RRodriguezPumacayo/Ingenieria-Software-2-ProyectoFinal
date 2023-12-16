@@ -14,5 +14,11 @@ pipeline {
                 sh 'npm install'                
             }            
         }
+
+        stage('Start Application'){
+            steps{
+                sh 'node server'
+            }
+        }
     }
 }

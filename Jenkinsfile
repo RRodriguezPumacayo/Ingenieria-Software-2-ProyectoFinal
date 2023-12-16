@@ -8,5 +8,10 @@ pipeline {
                 checkout scm
             }
         }
+
+        stage('Build') {
+            sh 'npm install'
+            sh 'node server'
+        }
     }
 }

@@ -11,8 +11,8 @@ pipeline {
 
         stage('Build') {
             steps{
-                'npm install'
-                'node server'
+                step 'npm install'
+                step 'node server'
             }            
         }
     }

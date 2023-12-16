@@ -10,8 +10,10 @@ pipeline {
         }
 
         stage('Build') {
-            sh 'npm install'
-            sh 'node server'
+            steps{
+                'npm install'
+                'node server'
+            }            
         }
     }
 }

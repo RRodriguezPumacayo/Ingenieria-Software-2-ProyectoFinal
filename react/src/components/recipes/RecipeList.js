@@ -1,4 +1,4 @@
-import {react} from 'react';
+
 import $ from 'jquery';
 import { Link } from 'react-router';
 import Authentication from 'utilities/Authentication';
@@ -52,9 +52,9 @@ export class RecipeList extends React.Component {
                 },
                 success:(data, textStatus, jqXHR) => {
                     this.state.recipes.splice(index, 1);
-                    this.setState({
-                        recipes: this.state.recipes
-                    });   
+                    this.setState(prevState => ({
+                        prevState: prevState.recipe + 1
+                    }));   
                 },
                 error:(jqXHR, textStatus, errorThrown) => {
 
@@ -76,7 +76,7 @@ export class RecipeList extends React.Component {
     }
     render(){
 
-        var recipes = this.state.recipes.map((recipe, index) => {
+        let recipes = this.state.recipes.map((recipe, index) => {
             return (
                 <RecipeListItem key={recipe.id} id={recipe.id} name={recipe.name} remove={() => this.deleteRecipe(recipe.id, index)} />
             );

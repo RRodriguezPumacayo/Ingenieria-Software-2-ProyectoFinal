@@ -17,12 +17,12 @@ class Events {
         }
     }   
     broadcast(name){
-        for(var i in this.eventList){
+        for(let i in this.eventList){
             if(i === name) {
-                var args = Array.prototype.slice.call(arguments);
+                let args = Array.prototype.slice.call(arguments);
                 args.splice(0, 1);
-                for(var j=0; j< this.eventList[name].length; j++) {
-                    this.eventList[name][j].callback.apply(this, args);
+                for (const event of this.eventList[name]) {
+                    event.callback.apply(this, args);
                 }
             }
         }        

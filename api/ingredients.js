@@ -1,5 +1,5 @@
-var db  = require('../utilities/SQL');
-var Authentication  = require('../utilities/Authentication');
+let db  = require('../utilities/SQL');
+let Authentication  = require('../utilities/Authentication');
 
 module.exports = function(app){ 
 
@@ -10,7 +10,7 @@ module.exports = function(app){
             if(error) {
                 response.status(500).send({ error: 'Error getting data' });
             } else {
-                var data = [];
+                let data = [];
                 results.forEach(function(item, index) {
                     data.push({
                         'id': item['id'],

@@ -1,24 +1,17 @@
-import {react} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export class Direction extends React.Component {
-    constructor(){
-        super(...arguments);
+class Direction extends Component {
+    constructor(props){
+        super(props);
         this.state = {
-            name: this.props.name,
-            mode: 'view'
-        }        
+            name: props.name,
+            mode: props.mode === 'edit' ? 'edit' : 'view'
+        };
     }
 
-    componentWillMount(){
-        if(this.props.mode === 'edit') {
-            this.setState({
-                mode: 'edit'
-            })
-        }
-    }
-
-    valueChanged(event){
-        let name = event.target.value;
+    valueChanged = (event) => {
+        const name = event.target.value;
         this.setState({
             name: name
         });
@@ -27,21 +20,32 @@ export class Direction extends React.Component {
     }
 
     render() {
-        if(this.state.mode === 'edit') { 
+        const { mode, name } = this.state;
+        const { remove } = this.props;
 
+        if(mode === 'edit') {
             return (
                 <div>
                     <p>
-                        <textarea className="left" value={this.state.name} onChange={(e) => this.valueChanged(e)}></textarea>
-                        <a onClick={this.props.remove} className="deleteDirection fa-icon-remove pointer left"></a>
+                        <textarea className="left" value={name} onChange={this.valueChanged}></textarea>
+                        <button onClick={remove} className="deleteDirection fa-icon-remove pointer left"></button>
                     </p>
                     <div className="clear"></div>
                 </div>
             );
         } else {
             return (
-                <li>{this.state.name}</li>
+                <li>{name}</li>
             );
         }
     }
 }
+
+Direction.propTypes = {
+    name: PropTypes.string.isRequired,
+    mode: PropTypes.string,
+    change: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
+};
+
+export default Direction;

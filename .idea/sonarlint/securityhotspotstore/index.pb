@@ -24,3 +24,5 @@ A
 react/index.html,8/8/888102a7ca818d0ad4790127675ac0daab5fa666
 \
 ,react/src/components/directions/Direction.js,6/a/6abaed68c4e4d7e9dbf764753ac0695ecfbf2e61
+^
+.react/src/components/ingredients/Ingredient.js,f/a/fa6559c00c7dcae3387a5ac2e555d936b8fbd548

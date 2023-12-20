@@ -1,6 +1,6 @@
-var basicAuth = require('basic-auth');
-var db = require('./SQL');
-var bcrypt = require('bcrypt-nodejs');
+const basicAuth = require('basic-auth');
+const database = require('./SQL');
+const bcrypt = require('bcrypt-nodejs');
 
 exports.BasicAuthentication = function(request, response, next) {
  
@@ -9,13 +9,13 @@ exports.BasicAuthentication = function(request, response, next) {
         return response.send(401);
     };
  
-    var user = basicAuth(request);
+    const user = basicAuth(request);
 
-    if (!user || !user.name || !user.pass) {
+    if (!user?.name || !user?.pass) {
         return unauthorized(response);
     };
     
-    db.query('SELECT * FROM `users` WHERE `username` = ?', [user.name], function (error, results, fields) {
+    database.query('SELECT * FROM `users` WHERE `username` = ?', [user.name], function (error, results, fields) {
         if(results.length > 0 && bcrypt.compareSync(user.pass, results[0]['password'])) {
             response.pageInfo.user = {
                 'id': results[0]['id'],

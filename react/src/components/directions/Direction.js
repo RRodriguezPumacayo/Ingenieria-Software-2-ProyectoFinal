@@ -1,4 +1,4 @@
-import {react} from 'react';
+import PropTypes from 'prop-types';
 
 export class Direction extends React.Component {
     constructor(){
@@ -9,7 +9,7 @@ export class Direction extends React.Component {
         }        
     }
 
-    componentWillMount(){
+    componentDidMount(){
         if(this.props.mode === 'edit') {
             this.setState({
                 mode: 'edit'
@@ -32,8 +32,10 @@ export class Direction extends React.Component {
             return (
                 <div>
                     <p>
-                        <textarea className="left" value={this.state.name} onChange={(e) => this.valueChanged(e)}></textarea>
-                        <a onClick={this.props.remove} className="deleteDirection fa-icon-remove pointer left"></a>
+                        <textarea className="left" value={this.state.name}
+                                  onChange={(e) => this.valueChanged(e)}></textarea>
+                        <button onClick={this.props.remove} className="deleteDirection fa-icon-remove pointer left">
+                        </button>
                     </p>
                     <div className="clear"></div>
                 </div>
@@ -45,3 +47,12 @@ export class Direction extends React.Component {
         }
     }
 }
+
+Direction.propTypes = {
+    remove: PropTypes.func.isRequired,
+    name: PropTypes.func.isRequired,
+    mode: PropTypes.func.isRequired,
+    change: PropTypes.func.isRequired
+};
+
+export default Direction;

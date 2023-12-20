@@ -1,4 +1,4 @@
-import {react} from 'react';
+import PropTypes from "prop-types";
 
 export class Ingredient extends React.Component {
     constructor(){
@@ -9,7 +9,7 @@ export class Ingredient extends React.Component {
         }
     }   
 
-    componentWillMount(){
+    componentDidMount(){
         if(this.props.mode === 'edit') {
             this.setState({
                 mode: 'edit'
@@ -34,8 +34,10 @@ export class Ingredient extends React.Component {
             return (
                 <div>
                     <p>
-                        <input type="text" value={this.state.name} onChange={(e) => this.valueChanged(e)} className="left" />
-                        <a onClick={this.props.remove} className="deleteIngredient fa-icon-remove pointer left"></a>
+                        <input type="text" value={this.state.name} onChange={(e) => this.valueChanged(e)}
+                               className="left"/>
+                        <button onClick={this.props.remove} className="deleteIngredient fa-icon-remove pointer left">
+                        </button>
                     </p>
                     <div className="clear"></div>
                 </div>
@@ -48,3 +50,10 @@ export class Ingredient extends React.Component {
 
     }
 }
+
+Ingredient.propTypes ={
+    remove: PropTypes.func.isRequired,
+    name: PropTypes.func.isRequired,
+    mode: PropTypes.func.isRequired,
+    change: PropTypes.func.isRequired
+};

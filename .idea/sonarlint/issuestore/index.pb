@@ -32,3 +32,5 @@ b
 2react/src/components/notifications/Notification.js,a/b/abf28aed0ed5bca2e8a26162a97cf575e265be9c
 W
 'react/src/components/pages/AboutPage.js,e/1/e18af545e3f0377c86587efa5fa6ddef66e9d30a
+V
+&react/src/components/pages/HomePage.js,e/5/e57a5859c59210107f9969868e1eef95cd4ed802

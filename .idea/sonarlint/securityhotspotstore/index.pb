@@ -28,3 +28,7 @@ A
 .react/src/components/ingredients/Ingredient.js,f/a/fa6559c00c7dcae3387a5ac2e555d936b8fbd548
 V
 &react/src/components/menus/UserMenu.js,5/5/556124419525a706d8bd8d0a73aca1e735282258
+b
+2react/src/components/notifications/Notification.js,a/b/abf28aed0ed5bca2e8a26162a97cf575e265be9c
+W
+'react/src/components/pages/AboutPage.js,e/1/e18af545e3f0377c86587efa5fa6ddef66e9d30a

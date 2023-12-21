@@ -23,7 +23,7 @@ export default class RecipeAddPage extends React.Component {
         this.directionsToDelete = [];
     }    
 
-    request(method = "GET", url, data = null){
+    request(url, data = null, method = "GET"){
 
         let def = $.Deferred();
         if(data) { data = JSON.stringify(data) }

@@ -1,0 +1,13 @@
+
+Hjavascript:S1128"%Remove this unused import of 'react'.(’Û ù8®Å©ØÈ1
+Ljavascript:S1128"$Remove this unused import of 'Link'.(Â„Ú—şÿÿÿÿ8®Å©ØÈ1
+Sjavascript:S1128"+Remove this unused import of 'hashHistory'.(Â„Ú—şÿÿÿÿ8®Å©ØÈ1
+Ojavascript:S6774"''params' is missing in props validation(ü•¼èıÿÿÿÿ8®Å©ØÈ1
+Rjavascript:S6774"*'params.id' is missing in props validation(ü•¼èıÿÿÿÿ8®Å©ØÈ1
+`javascript:S6756y"=Use callback in setState when referencing the previous state.(ù¯‹8®Å©ØÈ1
+javascript:S6844¬"dAnchor used as a button. Anchors are primarily expected to navigate. Use the button element instead.(˜é¿ûÿÿÿÿ8¯Å©ØÈ1
+ìjavascript:S6848¬"ÂAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(˜é¿ûÿÿÿÿ8¯Å©ØÈ1
+ˆjavascript:S1082¬"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(˜é¿ûÿÿÿÿ8¯Å©ØÈ1
+ˆjavascript:S6844²"dAnchor used as a button. Anchors are primarily expected to navigate. Use the button element instead.(×ó”¹8¯Å©ØÈ1
+çjavascript:S6848²"ÂAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(×ó”¹8¯Å©ØÈ1
+ƒjavascript:S1082²"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(×ó”¹8¯Å©ØÈ1

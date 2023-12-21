@@ -34,3 +34,9 @@ W
 'react/src/components/pages/AboutPage.js,e/1/e18af545e3f0377c86587efa5fa6ddef66e9d30a
 V
 &react/src/components/pages/HomePage.js,e/5/e57a5859c59210107f9969868e1eef95cd4ed802
+W
+'react/src/components/pages/LoginPage.js,e/6/e616986d07a9b2e3308f69262cd8607be179c555
+@
+react/src/App.js,2/8/28abf8883afd48782ee2c065f732ab615787f29a
+[
++react/src/components/pages/RecipeAddPage.js,b/f/bf5e287d00e97c2fa819ed3c81fcc01a0e04d491

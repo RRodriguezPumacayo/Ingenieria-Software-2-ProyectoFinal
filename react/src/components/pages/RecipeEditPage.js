@@ -1,9 +1,8 @@
-import {react} from 'react';
 import $ from 'jquery';
-import {Link, hashHistory} from 'react-router';
 import {Helper} from 'utilities/Helper';
 import Events from 'utilities/Events';
 import Authentication from 'utilities/Authentication';
+import PropTypes from "prop-types";
 import {Direction} from 'components/directions/Direction';
 import {Ingredient} from 'components/ingredients/Ingredient';
 
@@ -23,7 +22,7 @@ export default class RecipeEditPage extends React.Component {
         this.directionsToDelete = [];
     }    
 
-    request(method = "GET", url, data = null){
+    request(url, data = null, method = "GET"){
 
         let def = $.Deferred();
         if(data) { data = JSON.stringify(data) }
@@ -118,7 +117,8 @@ export default class RecipeEditPage extends React.Component {
     removeDirection(index){
         
         this.setState((state, props) => {
-            let direction = this.state.directions.splice(index, 1);
+            const directions = [...prevState.directions];
+            const direction = directions.splice(index, 1);
 
             // direction is not a newly added (i.e. unsaved direction) so we have to mark it for deletion
             if(!direction[0].isNew) { 
@@ -168,7 +168,7 @@ export default class RecipeEditPage extends React.Component {
         
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.request("GET", `/recipes/${this.state.id}`).then(recipe => {
             this.setState({ 
                 id: recipe.id,
@@ -207,13 +207,13 @@ export default class RecipeEditPage extends React.Component {
                 <h2>Edit Recipe: {this.state.name}</h2>
                 <input type="text" value={this.state.name} onChange={(e) => this.nameChanged(e)} />
                 <h3>Ingredients</h3>
-                <p><a onClick={() => this.addIngredient()} className="fa-icon-plus pointer"> Add Ingredient</a></p>
+                <p><button onClick={() => this.addIngredient()} className="fa-icon-plus pointer"> Add Ingredient</button></p>
                 <div>
                     {ingredients}
                 </div>
 
                 <h3>Directions</h3>
-                <p><a onClick={() => this.addDirection()} className="fa-icon-plus pointer"> Add Direction</a></p>
+                <p><button onClick={() => this.addDirection()} className="fa-icon-plus pointer"> Add Direction</button></p>
                 <div>
                     {directions}
                 </div>
@@ -226,3 +226,9 @@ export default class RecipeEditPage extends React.Component {
         );
     }
 }
+
+RecipeEditPage.propTypes = {
+    params: PropTypes.shape({
+        id: PropTypes.string.isRequired
+    }).isRequired()
+};

@@ -46,3 +46,15 @@ W
 ,react/src/components/pages/RecipeListPage.js,f/b/fb878c7b2af7598cb5ff7d035d9fc76ec20d1dc1
 \
 ,react/src/components/pages/RecipeViewPage.js,0/4/042e6bfaf90981284851df3f03ef9d05bd16d364
+X
+(react/src/components/pages/SignUpPage.js,d/1/d118d076c1cd9580c5a8686a897162d3159548b3
+Z
+*react/src/components/recipes/RecipeList.js,7/2/72af2a8fad3603f2969de5d93a97f85fb808dddd
+^
+.react/src/components/recipes/RecipeListItem.js,2/5/25ccaf23b39b3b2730b1415f8b95f32564545394
+U
+%react/src/utilities/Authentication.js,7/e/7e5b60648b996a7b7a96e940037f7662a127a7c4
+M
+react/src/utilities/Events.js,0/3/033659f5aae9d30b170fc0f19d70406e9a373a0e
+M
+react/src/utilities/Helper.js,1/c/1c86a6db153325505980abbf1fe97535365a09e8

@@ -1,5 +1,5 @@
-import {react} from 'react';
 import config from 'Config';
+import PropTypes from "prop-types";
 global.Config = config;
 
 export default class App extends React.Component {
@@ -11,3 +11,7 @@ export default class App extends React.Component {
         );
     }
 }
+
+App.propTypes = {
+    children: PropTypes.string.isRequired,
+};

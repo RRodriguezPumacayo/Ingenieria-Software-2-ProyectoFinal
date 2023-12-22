@@ -1,10 +1,6 @@
-import {react} from 'react';
 import {Link} from 'react-router';
 
 export default class HomePage extends React.Component {
-    constructor(){
-        super(...arguments);
-    }
     render(){
         return(        
             <div>

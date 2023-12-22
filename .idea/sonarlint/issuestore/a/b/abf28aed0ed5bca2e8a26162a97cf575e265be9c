@@ -1,0 +1,10 @@
+
+„javascript:S6788$"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(×àç´8»’¦×È1
+Ajavascript:S6790$"Using this.refs is deprecated.(×àç´8»’¦×È1
+‰javascript:S6788)"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(ÍËÁøÿÿÿÿ8»’¦×È1
+Fjavascript:S6790)"Using this.refs is deprecated.(ÍËÁøÿÿÿÿ8»’¦×È1
+‰javascript:S67882"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(ÍËÁøÿÿÿÿ8¼’¦×È1
+Fjavascript:S67902"Using this.refs is deprecated.(ÍËÁøÿÿÿÿ8¼’¦×È1
+ëjavascript:S68489"ÂAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(ÿ†Éáøÿÿÿÿ8¼’¦×È1
+‡javascript:S10829"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(ÿ†Éáøÿÿÿÿ8¼’¦×È1
+^javascript:S67909"6Using string literals in ref attributes is deprecated.(ÿ†Éáøÿÿÿÿ8¼’¦×È1

@@ -1,8 +1,4 @@
 export class Helper {
- 
-    constructor(){ 
-
-    }    
     
     static log(msg) {
         console.log(msg);
@@ -13,10 +9,10 @@ export class Helper {
             strLength = 8;
         }
 
-        var text = "";
-        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let text = "";
+        const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        for(var i=0; i < strLength; i++) {
+        for(let i=0; i < strLength; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
         return text;
@@ -24,24 +20,24 @@ export class Helper {
     }
 
     static CreateCookie(name,value,days){
+        let expires = "";
         if (days) {
-            var date = new Date();
-            date.setTime(date.getTime()+(days*24*60*60*1000));
-            var expires = "; expires="+date.toGMTString();
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
         }
-        else {
-            var expires = "";
-        }
-        document.cookie = name+"="+value+expires+"; path=/";        
+
+        document.cookie = name + "=" + value + expires + "; path=/";
     }
 
     static ReadCookie(name){
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        const nombreEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for(const c of ca) {
+            let recorteC = c.trim();
+            if (recorteC.startsWith(nombreEQ)){
+                return recorteC.substring(nombreEQ.length);
+            }
         }
         return null;
     }

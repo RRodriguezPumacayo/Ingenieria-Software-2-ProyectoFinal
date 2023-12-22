@@ -1,11 +1,5 @@
 
-Ajavascript:S1128"%Remove this unused import of 'react'.(’Û ù
-/javascript:S6647"Useless constructor.(Ú¯œ
-}javascript:S6788*"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(îú¤
-:javascript:S6790*"Using this.refs is deprecated.(îú¤
-}javascript:S6788+"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(¾ «Š
-:javascript:S6790+"Using this.refs is deprecated.(¾ «Š
-Jjavascript:S68536"/A form label must be associated with a control.(ŒÃ²W
-Qjavascript:S67906"6Using string literals in ref attributes is deprecated.(ŒÃ²W
-Pjavascript:S68537"/A form label must be associated with a control.(‹§ïèÿÿÿÿÿ
-Wjavascript:S67907"6Using string literals in ref attributes is deprecated.(‹§ïèÿÿÿÿÿ
+}javascript:S6788&"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(îú¤
+:javascript:S6790&"Using this.refs is deprecated.(îú¤
+}javascript:S6788'"aDo not use findDOMNode. It doesn't work with function components and is deprecated in StrictMode.(¾ «Š
+:javascript:S6790'"Using this.refs is deprecated.(¾ «Š

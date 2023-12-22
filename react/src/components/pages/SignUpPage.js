@@ -1,13 +1,9 @@
-import {react} from 'react';
 import $ from 'jquery';
 import config from 'Config';
 import Events from 'utilities/Events';
 import {Helper} from 'utilities/Helper';
 
 export default class SignUpPage extends React.Component {
-    constructor(){
-        super(...arguments);        
-    }
 
     createUser(username, password) {
         
@@ -51,8 +47,14 @@ export default class SignUpPage extends React.Component {
         return (
             <div id="sign-up">
                 <h2>Sign Up</h2>
-                <p><label>User Name</label> <input name="name" type="text" ref="name" /></p>
-                <p><label>Password</label><input name="password" type="password" ref="password" /></p>
+                <p>
+                    <label htmlFor="name">User Name</label>
+                    <input name="name" type="text" id="name" ref={(input) => this.nameInput = input} />
+                </p>
+                <p>
+                    <label htmlFor="name">Password</label>
+                    <input name="password" type="password" ref={(input) => this.passwordInput = input} />
+                </p>
                 <button id="signup" onClick={() => this.signup()}>Sign Up</button>
             </div>
         );

@@ -1,5 +1,4 @@
-import {react} from 'react';
-import { Router, Route, hashHistory, useRouterHistory, IndexRoute, Link } from 'react-router';
+import { Router, Route, useRouterHistory, IndexRoute } from 'react-router';
 import { createHashHistory } from 'history';
 import Authentication from 'utilities/Authentication';
 import App from './App';

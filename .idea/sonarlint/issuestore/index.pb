@@ -58,3 +58,15 @@ M
 react/src/utilities/Events.js,0/3/033659f5aae9d30b170fc0f19d70406e9a373a0e
 M
 react/src/utilities/Helper.js,1/c/1c86a6db153325505980abbf1fe97535365a09e8
+C
+react/src/Config.js,1/6/16ac8994328496b73e0de9ab1281969cb219068b
+A
+react/src/Main.js,2/0/203ec15b6a607dc28d77715c35ff9c9db2d562e3
+B
+sql/recipebook.sql,a/9/a992944ea4ba2675ef4a2c3a2524ba403fc05bdd
+G
+utilities/Middleware.js,1/3/13d389854b1296082df8daac1b3af2bacb61381b
+9
+	router.js,0/2/027aa410fb306e750579a7d04d1fb9cc840d15e6
+A
+webpack.config.js,d/5/d5595158cc48f9bf3e51b06f6e6805a8fd2d6262

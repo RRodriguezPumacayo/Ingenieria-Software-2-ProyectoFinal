@@ -21,8 +21,8 @@ class Events {
             if(i === name) {
                 let args = Array.prototype.slice.call(arguments);
                 args.splice(0, 1);
-                for(let j=0; j< this.eventList[name].length; j++) {
-                    this.eventList[name][j].callback.apply(this, args);
+                for(const event of this.eventList[name]) {
+                    event.callback.apply(this, args);
                 }
             }
         }        

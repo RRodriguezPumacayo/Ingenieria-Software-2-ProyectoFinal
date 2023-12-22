@@ -1,9 +1,8 @@
-import {react} from 'react';
 import $ from 'jquery';
-import {Link, hashHistory} from 'react-router';
 import Authentication from 'utilities/Authentication';
 import {Direction} from 'components/directions/Direction';
 import {Ingredient} from 'components/ingredients/Ingredient';
+import PropTypes from "prop-types";
 
 export default class RecipePage extends React.Component {
 
@@ -17,7 +16,7 @@ export default class RecipePage extends React.Component {
         }
     }    
 
-    request(method = "GET", url, data = null){
+    request(url, data = null, method = "GET"){
 
         let def = $.Deferred();
         if(data) { data = JSON.stringify(data) }
@@ -42,7 +41,7 @@ export default class RecipePage extends React.Component {
             
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.request("GET", `/recipes/${this.state.id}`).then(recipe => {
             this.setState({ 
                 id: recipe.id,
@@ -90,3 +89,9 @@ export default class RecipePage extends React.Component {
         );
     }
 }
+
+RecipePage.propTypes = {
+    params: PropTypes.shape({
+        id: PropTypes.string.isRequired
+    }).isRequired()
+};

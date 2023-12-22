@@ -44,3 +44,5 @@ W
 ,react/src/components/pages/RecipeEditPage.js,e/e/ee44efbbff19fdd0dcd95f8efff0437c65c3469c
 \
 ,react/src/components/pages/RecipeListPage.js,f/b/fb878c7b2af7598cb5ff7d035d9fc76ec20d1dc1
+\
+,react/src/components/pages/RecipeViewPage.js,0/4/042e6bfaf90981284851df3f03ef9d05bd16d364

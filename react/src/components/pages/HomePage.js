@@ -6,7 +6,7 @@ export default class HomePage extends React.Component {
             <div>
                 <p>Welcome to the Recipe Book Application...</p>
 
-                <h4><Link to="/recipes">View My Recipes</Link></h4>        
+                <h4><Link to="/recipes" onlyActiveOnIndex>View My Recipes</Link></h4>
             </div>
         );
     }

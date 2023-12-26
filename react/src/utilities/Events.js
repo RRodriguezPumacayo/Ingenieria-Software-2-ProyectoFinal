@@ -21,7 +21,7 @@ class Events {
             if(i === name) {
                 let args = Array.prototype.slice.call(arguments);
                 args.splice(0, 1);
-                for(const event of this.eventList[name]) {
+                for (const event of this.eventList[name]) {
                     event.callback.apply(this, args);
                 }
             }

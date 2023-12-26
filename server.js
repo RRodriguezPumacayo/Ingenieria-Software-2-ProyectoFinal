@@ -1,13 +1,13 @@
-var express = require('express');
-var hbs = require('hbs');
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
-var methodOverride = require('method-override');
-var errorHandler = require('errorhandler');
-var http = require('http');
-var path = require('path');
-var Middleware = require('./utilities/Middleware');
-var app = express();
+let express = require('express');
+let hbs = require('hbs');
+let bodyParser = require('body-parser');
+let cookieParser = require('cookie-parser');
+let methodOverride = require('method-override');
+let errorHandler = require('errorhandler');
+let http = require('http');
+let path = require('path');
+let Middleware = require('./utilities/Middleware');
+let app = express();
 app.set('port', 8080);
 
 app.set('view engine', 'html');

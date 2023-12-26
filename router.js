@@ -1,7 +1,7 @@
-const recipes = require('./api/recipes');
-const users = require('./api/users');
-const ingredients = require('./api/ingredients');
-const directions = require('./api/directions');
+let recipes = require('./api/recipes');
+let users = require('./api/users');
+let ingredients = require('./api/ingredients');
+let directions = require('./api/directions');
 
 module.exports = function(app){ 
 

@@ -1,5 +1,5 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
+const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('EnterReact', function() {
@@ -8,14 +8,14 @@ describe('EnterReact', function() {
 
   beforeEach(async function() {
     try {
-      // Configura el controlador de Gecko (geckodriver)
+      // Configura el controlador de Chrome (chromedriver)
+      const options = new chrome.Options();
       driver = await new Builder()
-          .forBrowser('firefox')
-          .setFirefoxOptions(new firefox.Options())
-          .usingServer('http://127.0.0.1:4445')
+          .forBrowser('chrome')
+          .setChromeOptions(options)
           .build();
     } catch (error) {
-      console.error('Error al configurar el controlador de Gecko:', error);
+      console.error('Error al configurar el controlador de Chrome:', error);
     }
   });
 
@@ -38,6 +38,7 @@ describe('EnterReact', function() {
       await driver.get("http://localhost:8080/");
       await driver.manage().window().setRect({ width: 782, height: 872 });
       await driver.findElement(By.linkText("React")).click();
+      // No es necesario llamar a driver.quit() aquí, ya que se maneja en el afterEach
     } catch (error) {
       console.error('Error durante las pruebas:', error);
       throw error;

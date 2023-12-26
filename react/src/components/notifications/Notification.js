@@ -1,4 +1,3 @@
-import {react} from 'react';
 import $ from 'jquery';
 import Events from 'utilities/Events';
 
@@ -23,36 +22,32 @@ export default class Notification extends React.Component {
     getClass(type){
         switch(type){
             case 'success':
-                return 'accepted notification'
-                break;            
+                return 'accepted notification';
             case 'error':
                 return 'cancel notification'
-                break;
             case 'warning':
                 return 'warning notification';
-                break;
             case 'information':
-                return 'information notification'                                
-                break;
+                return 'information notification';
         }        
     }
 
     componentDidMount(){
-        var node = ReactDOM.findDOMNode(this.refs.display);
+            const node = ReactDOM.findDOMNode(this.refs.display);
         $(node).hide();
     }
 
     show(){
-        var node = ReactDOM.findDOMNode(this.refs.display);
+        let node = ReactDOM.findDOMNode(this.refs.display);
         $(node).show();
         setTimeout(() =>{
             this.fadeout();
         }, 5000);
-        
+
     }
 
     fadeout() {
-        var node = ReactDOM.findDOMNode(this.refs.display);
+        let node = ReactDOM.findDOMNode(this.refs.display);
         $(node).fadeOut();
     }
 

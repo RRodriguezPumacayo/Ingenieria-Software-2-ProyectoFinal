@@ -16,14 +16,14 @@ app.engine('html', hbs.__express);
 /* cookie-parser - https://github.com/expressjs/cookie-parser
  Parse Cookie header and populate req.cookies with an object keyed by the cookie names. */
 app.use(cookieParser('SECRETCOOKIEKEY123'));
- 
-/* body-parser - https://github.com/expressjs/body-parser 
+
+/* body-parser - https://github.com/expressjs/body-parser
 Node.js body parsing middleware. */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 /* method-override - https://github.com/expressjs/method-override
- Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it. */           
+ Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it. */
 app.use(methodOverride());
 
 /* errorhandler - https://github.com/expressjs/errorhandler

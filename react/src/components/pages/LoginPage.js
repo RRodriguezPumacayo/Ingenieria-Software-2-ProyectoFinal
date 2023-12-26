@@ -1,28 +1,51 @@
-import {react} from 'react';
-import {Helper} from 'utilities/Helper';
+import React, { useState } from 'react';
 import Authentication from 'utilities/Authentication';
 import Events from 'utilities/Events';
+import Helper from 'utilities/Helper';
 
-export default class LoginPage extends React.Component {
-    constructor(){
-        super(...arguments);        
-    }
-    login(){
-        let username = ReactDOM.findDOMNode(this.refs.name).value
-        let password = ReactDOM.findDOMNode(this.refs.password).value
-        Authentication.login(username, password).then((user) => { 
+const LoginPage = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const login = () => {
+        Authentication.login(username, password).then((user) => {
             Events.broadcast('login');
-            Helper.Redirect(); 
+            Helper.Redirect();
         });
-    }    
-    render() {
-        return (
-            <div id="log-in">
-                <h2>Please log in</h2>
-                <p><label>User Name</label> <input name="name" type="text" ref="name" /></p>
-                <p><label>Password</label><input name="password" type="password" ref="password" /></p>
-                <button id="login" onClick={() => this.login()}>Login</button>
-            </div>
-        );
-    }
-}
+    };
+
+    return (
+        <div id="log-in">
+            <h2>Please log in</h2>
+            <p>
+                <label>
+                    <input type="text">
+                        User Name
+                    </input>
+                </label>
+                <input name="name" type="text" value={username} onChange={handleUsernameChange} />
+            </p>
+            <p>
+                <label>
+                    <input type="text">
+                        Password
+                    </input>
+                </label>
+                <input name="password" type="password" value={password} onChange={handlePasswordChange} />
+            </p>
+            <button id="login" onClick={login}>
+                Login
+            </button>
+        </div>
+    );
+};
+
+export default LoginPage;

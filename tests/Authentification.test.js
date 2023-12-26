@@ -1,6 +1,6 @@
-const { BasicAuthentication } = require('../utilities/authentication');
+const { BasicAuthentication } = require('../utilities/Authentication');
 const bcrypt = require('bcrypt-nodejs');
-const db = require('../utilities/SQL');
+const database = require('../utilities/SQL');
 
 jest.mock('../utilities/SQL', () => ({
     query: jest.fn(),
@@ -36,7 +36,7 @@ describe('BasicAuthentication', () => {
 
     test('should return 401 if user not found in the database', () => {
         mockRequest.headers.authorization = 'Basic ' + Buffer.from('nonexistentuser:password').toString('base64');
-        db.query.mockImplementation((query, values, callback) => {
+        database.query.mockImplementation((query, values, callback) => {
             callback(null, [], []);
         });
 
@@ -60,7 +60,7 @@ describe('BasicAuthentication', () => {
             },
         ];
 
-        db.query.mockImplementation((query, values, callback) => {
+        database.query.mockImplementation((query, values, callback) => {
             callback(null, mockDbResult, []);
         });
 
@@ -89,7 +89,7 @@ describe('BasicAuthentication', () => {
             },
         ];
 
-        db.query.mockImplementation((query, values, callback) => {
+        database.query.mockImplementation((query, values, callback) => {
             callback(null, mockDbResult, []);
         });
 
@@ -98,7 +98,4 @@ describe('BasicAuthentication', () => {
         expect(mockResponse.send).toHaveBeenCalledWith(401);
         expect(mockNext).not.toHaveBeenCalled();
     });
-
-    // Agrega más pruebas según sea necesario para cubrir diferentes casos.
-
 });

@@ -1,5 +1,3 @@
-import {react} from 'react';
-import { Link } from 'react-router';
 import Authentication from 'utilities/Authentication';
 import Events from 'utilities/Events';
 
@@ -21,9 +19,9 @@ export default class UserMenu extends React.Component {
         if(Authentication.getUserInfo().id){
             return (
                 <div>
-                    Welcome {Authentication.getUserInfo().username} | <a onClick={() => this.logout()}>Logout</a>
+                    Welcome {Authentication.getUserInfo().username} | <button onClick={() => this.logout()}>Logout</button>
                 </div>
-            );            
+            );
         } else {
             return (
                 <div>

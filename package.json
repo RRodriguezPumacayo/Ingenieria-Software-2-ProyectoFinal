@@ -23,7 +23,7 @@
         "mocha": "^10.2.0",
         "node-mysql": "0.4.2",
         "prop-types": "^15.8.1",
-        "react": "^18.2.0",
+        "react": "^15.7.0",
         "react-router": "3.0.0",
         "selenium-webdriver": "^4.16.0"
     },

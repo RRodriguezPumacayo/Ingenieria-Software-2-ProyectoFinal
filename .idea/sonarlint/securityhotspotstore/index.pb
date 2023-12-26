@@ -79,3 +79,7 @@ S
 #tests/functional/enterReact.spec.js,a/8/a86d5633ed2ecd8fb59539504d9fd7ddc323ca66
 \
 ,node_modules/selenium-webdriver/lib/error.js,9/3/93c089a359eda65a80ce7471474da36fb3cf28b5
+P
+ node_modules/mocha/lib/runner.js,c/a/cad8d803afa633f45a5aa630be000b68aba3c867
+[
++node_modules/selenium-webdriver/lib/http.js,9/e/9e979dfaf45dab0e3dc9aa686fed360bcc6a1a82

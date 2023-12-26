@@ -30,5 +30,11 @@ pipeline {
                 sh 'npm run test:unit'
             }
         }
+
+        stage('Pruebas Funcionales'){
+            steps{
+                sh 'npm run test:functional'
+            }
+        }
     }
 }

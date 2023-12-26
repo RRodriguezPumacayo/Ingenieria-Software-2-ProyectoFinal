@@ -18,8 +18,10 @@ pipeline {
         // Ejecutar el programa y que siga en segundo plano
         stage('Start Application'){
             steps{
-                sh 'node server'
                 sh 'nohup node server &'
+
+                // Espera un breve periodo para que el servidor tenga tiempo de iniciar
+                sleep time: 10, unit: 'SECONDS'
             }
         }
 

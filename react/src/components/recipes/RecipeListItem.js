@@ -1,24 +1,26 @@
-import {react} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
-export default class RecipeListItem extends React.Component {
-    constructor(){
-        super(...arguments);
-        
-    }
-    render() {
+const RecipeListItem = ({ id, name, remove }) => {
+    const cssClass = `recipe-item-${id}`;
+    const viewPath = `/recipe/${id}`;
+    const editPath = `/edit/${id}`;
 
-        let cssClass = `recipe-item-${this.props.id}`;
-        let viewPath = `/recipe/${this.props.id}`;
-        let editPath = `/edit/${this.props.id}`;
-
-        return (
-            <div className={cssClass}>
-                <h4>{this.props.name}</h4>
-                <Link to={viewPath} className="fa-icon-eye-open"> View</Link>&nbsp;|&nbsp;		
-                <Link to={editPath} className="fa-icon-pencil"> Edit</Link>&nbsp;|&nbsp;
-                <a onClick={this.props.remove} className="delete fa-icon-remove"> Delete</a>
-            </div>
-        );
-    }
+    return (
+        <div className={cssClass}>
+            <h4>{name}</h4>
+            <Link to={viewPath} className="fa-icon-eye-open"> View</Link> |
+            <Link to={editPath} className="fa-icon-pencil"> Edit</Link> |
+            <button onClick={remove} className="delete fa-icon-remove"> Delete</button>
+        </div>
+    );
 }
+
+RecipeListItem.propTypes = {
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    remove: PropTypes.func.isRequired,
+};
+
+export default RecipeListItem;

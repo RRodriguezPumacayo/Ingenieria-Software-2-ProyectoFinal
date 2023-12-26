@@ -1,5 +1,4 @@
-import {react} from 'react';
-import { Router, Route, hashHistory, useRouterHistory, IndexRoute, Link } from 'react-router';
+import { Router, Route, IndexRoute} from 'react-router';
 import { createHashHistory } from 'history';
 import Authentication from 'utilities/Authentication';
 import App from './App';
@@ -14,7 +13,7 @@ import RecipeAddPage from 'components/pages/RecipeAddPage';
 import RecipeViewPage from 'components/pages/RecipeViewPage';
 import RecipeEditPage from 'components/pages/RecipeEditPage';
 
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+const appHistory = createHashHistory({ queryKey: false });
 
 ReactDOM.render(<UserMenu />, document.getElementById('userInfo'));
 

@@ -1,11 +1,0 @@
-
-Ajavascript:S1128"%Remove this unused import of 'react'.(’Ы щ
-/javascript:S6647"Useless constructor.(ЪЇњ
-Djavascript:S6774"#'id' is missing in props validation(Д®Тлэяяяя
-?javascript:S6774"#'id' is missing in props validation(с”Юы
-?javascript:S6774"#'id' is missing in props validation(‘ИЊ±
-Ajavascript:S6774"%'name' is missing in props validation(¶Њ•Ш
-Ђjavascript:S6844"dAnchor used as a button. Anchors are primarily expected to navigate. Use the button element instead.(Сгьи
-Яjavascript:S6848"ВAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(Сгьи
-{javascript:S1082"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(Сгьи
-Cjavascript:S6774"''remove' is missing in props validation(Сгьи

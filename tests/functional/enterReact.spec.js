@@ -1,5 +1,5 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
+const firefox = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('EnterReact', function() {
@@ -10,7 +10,7 @@ describe('EnterReact', function() {
     try {
       // Configura el controlador de Gecko (geckodriver)
       driver = await new Builder()
-          .forBrowser('firefox')
+          .forBrowser('chrome')
           .setFirefoxOptions(new firefox.Options())
           .usingServer('http://127.0.0.1:4445')
           .build();
@@ -38,6 +38,7 @@ describe('EnterReact', function() {
       await driver.get("http://localhost:8080/");
       await driver.manage().window().setRect({ width: 782, height: 872 });
       await driver.findElement(By.linkText("React")).click();
+      await driver.quit();
     } catch (error) {
       console.error('Error durante las pruebas:', error);
       throw error;

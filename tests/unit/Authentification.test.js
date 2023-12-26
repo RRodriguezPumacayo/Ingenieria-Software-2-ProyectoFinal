@@ -1,8 +1,8 @@
-const { BasicAuthentication } = require('../utilities/Authentication');
+const { BasicAuthentication } = require('../../utilities/Authentication');
 const bcrypt = require('bcrypt-nodejs');
-const database = require('../utilities/SQL');
+const database = require('../../utilities/SQL');
 
-jest.mock('../utilities/SQL', () => ({
+jest.mock('../../utilities/SQL', () => ({
     query: jest.fn(),
 }));
 

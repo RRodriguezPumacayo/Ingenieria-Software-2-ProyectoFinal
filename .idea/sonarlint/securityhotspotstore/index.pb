@@ -1,8 +1,6 @@
 
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-N
-tests/Authentification.test.js,3/4/34b66d3c4599f8fe3151a40342eaaee4ee4caa6f
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 K
@@ -73,3 +71,11 @@ A
 index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
 ;
 Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
+S
+#tests/unit/Authentification.test.js,d/b/dbc865a01db4c243dd46e79b0e8897eeb2bfdcce
+>
+jest.config.js,8/8/881d5d47bdc17ef8facebef59b68b5fc099a0293
+S
+#tests/functional/enterReact.spec.js,a/8/a86d5633ed2ecd8fb59539504d9fd7ddc323ca66
+\
+,node_modules/selenium-webdriver/lib/error.js,9/3/93c089a359eda65a80ce7471474da36fb3cf28b5

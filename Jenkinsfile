@@ -27,7 +27,7 @@ pipeline {
 
         stage('Pruebas Unitarias'){
             steps{
-                sh 'npm run test'
+                sh 'npm run test:unit'
             }
         }
     }

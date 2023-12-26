@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let express = require('express');
 let hbs = require('hbs');
 let bodyParser = require('body-parser');
@@ -8,6 +9,18 @@ let http = require('http');
 let path = require('path');
 let Middleware = require('./utilities/Middleware');
 let app = express();
+=======
+const express = require('express');
+const hbs = require('hbs');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
+const errorHandler = require('errorhandler');
+const http = require('http');
+const path = require('path');
+const Middleware = require('./utilities/Middleware');
+const app = express();
+>>>>>>> 90ddf0b2a9f94f0bdc3aed8289299dc14c07ede3
 app.set('port', 8080);
 
 app.set('view engine', 'html');

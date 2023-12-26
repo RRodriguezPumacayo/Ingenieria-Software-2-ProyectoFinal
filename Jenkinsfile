@@ -33,6 +33,10 @@ pipeline {
 
         stage('Pruebas Funcionales'){
             steps{
+                sh 'nohup node server &'
+
+                // Espera un breve periodo para que el servidor tenga tiempo de iniciar
+                sleep time: 10, unit: 'SECONDS'
                 sh 'npm run test:functional'
             }
         }

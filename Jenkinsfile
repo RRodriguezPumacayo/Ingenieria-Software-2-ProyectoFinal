@@ -1,5 +1,5 @@
 pipeline {
-    agent any    
+    agent any
 
     stages {
         stage('Checkout') {
@@ -8,11 +8,11 @@ pipeline {
                 checkout scm
             }
         }
-        
+
         stage('Build') {
             steps{
-                sh 'npm install'                
-            }            
+                sh 'npm install'
+            }
         }
 
         // Ejecutar el programa y que siga en segundo plano
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Pruebas Unitarias'){
             steps{
-                sh 'npm test'
+                sh 'npm run test'
             }
         }
     }

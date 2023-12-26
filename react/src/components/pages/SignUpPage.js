@@ -35,8 +35,9 @@ export default class SignUpPage extends React.Component {
     }
 
     signup(){
-        let username = ReactDOM.findDOMNode(this.refs.name).value
-        let password = ReactDOM.findDOMNode(this.refs.password).value
+        const username = this.nameInput.value;
+        const password = this.passwordInput.value;
+
         this.createUser(username, password).then((user) => { 
             Helper.Redirect();
         }).fail(() => {
@@ -52,7 +53,7 @@ export default class SignUpPage extends React.Component {
                     <input name="name" type="text" id="name" ref={(input) => this.nameInput = input} />
                 </p>
                 <p>
-                    <label htmlFor="name">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input name="password" type="password" ref={(input) => this.passwordInput = input} />
                 </p>
                 <button id="signup" onClick={() => this.signup()}>Sign Up</button>

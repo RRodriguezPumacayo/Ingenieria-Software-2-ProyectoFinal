@@ -16,8 +16,6 @@ A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 9
 	server.js,d/c/dc60ea9ee1ff6246bf342463277d5b914db2883d
-;
-Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
 A
 react/dist/App.js,f/1/f1a6385746893a71380231a8a3e525b1bc44af20
 @
@@ -70,3 +68,8 @@ G
 	router.js,0/2/027aa410fb306e750579a7d04d1fb9cc840d15e6
 A
 webpack.config.js,d/5/d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
+:
+
+index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
+;
+Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520

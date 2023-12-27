@@ -4,7 +4,7 @@ Libro de Recetas
 Una página web construida con JavaScript, MySQL y [Node.js](http://www.nodejs.org) (como servidor y REST API). Este proyecto tiene dos objetivos.
 1. El primero idear algunos métodos posibles para abordar algunos de los componentes más complicados que se utilizan al crear aplicaciones del lado del cliente (por ejemplo, autenticación de usuario, autorización, inicio y cierre de sesión, manejo de errores, notificaciones y datos relacionales).
 2. El segundo es construir un pipeline de CI/CD para desarrollar o evolucionar nuestra aplicación web de software con las siguientes características:
-    * .Interfaz gráfica de usuario (cualquier lenguaje de programación, biblioteca o framework);
+    * Interfaz gráfica de usuario (cualquier lenguaje de programación, biblioteca o framework);
     * Base de datos (MySql, SQLite, MongoDB, Neo4J u otro).
     * Patrones/Estilos de arquitectura.
     * Prácticas de desarrollo de software:

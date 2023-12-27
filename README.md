@@ -13,6 +13,11 @@ Una página web construida con JavaScript, MySQL y [Node.js](http://www.nodejs.o
         - Codificación Limpia (Clean Code)
         - Principios SOLID.
 
+### Integrantes
+   
+   * Ricardo Alexander Rodriguez Pumacayo
+   * Antony Olmer Aroni Jarata
+
 ### Configuración
 
 Este proyecto usa Node.js como servidor y REST API. Para instalar las dependencias del proyecto, ejecutar el siguiente comando en la terminal.

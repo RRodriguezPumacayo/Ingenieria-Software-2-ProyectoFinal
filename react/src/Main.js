@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import { Router, Route, IndexRoute} from 'react-router';
-=======
-import { Router, Route, useRouterHistory, IndexRoute } from 'react-router';
->>>>>>> 90ddf0b2a9f94f0bdc3aed8289299dc14c07ede3
+
+import { Router, Route, IndexRoute } from 'react-router';
 import { createHashHistory } from 'history';
 import Authentication from 'utilities/Authentication';
 import App from './App';

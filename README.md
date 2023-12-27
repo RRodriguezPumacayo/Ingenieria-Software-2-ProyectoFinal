@@ -123,6 +123,17 @@ npm run test:functional
 ```
 [![image.png](https://i.postimg.cc/3JSwTMF8/image.png)](https://postimg.cc/TpbxV4sF)
 ### Pruebas de Performance: JMeter
+#### Inicio Sesion
+[![image.png](https://i.postimg.cc/76Qj51Hj/image.png)](https://postimg.cc/R6Kg8HnT)
+#### enviar_ingredientes
+[![image.png](https://i.postimg.cc/x18kVnk5/image.png)](https://postimg.cc/G403k0xT)
+#### listar ambuerguesa
+[![image.png](https://i.postimg.cc/BvCR59pW/image.png)](https://postimg.cc/sBvnyLbK)
+#### Listar torta
+[![image.png](https://i.postimg.cc/GhF03yDh/image.png)](https://postimg.cc/QHdY0VSR)
+#### Reporte final
+[![image.png](https://i.postimg.cc/gkHgxq2j/image.png)](https://postimg.cc/w73XPNJY)
+
 ### Pruebas de Seguridad: OWASP ZAP
 [Reporte](./is_ii.pdf)
 

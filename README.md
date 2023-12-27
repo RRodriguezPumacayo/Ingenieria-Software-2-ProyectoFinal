@@ -13,29 +13,19 @@ Una página web construida con JavaScript, MySQL y [Node.js](http://www.nodejs.o
         - Codificación Limpia (Clean Code)
         - Principios SOLID.
 
-Current libraries demonstrated...
+### Configuración
 
-* [Backbone.js](http://backbonejs.org/)
-* [AngularJS 1](http://angularjs.org/)
-* [React](https://facebook.github.io/react/)
-
-Perhaps more will be used in the future...
-
-**Disclaimer:** At present, not all of this code is 100% production ready (far from it actually, lol). Both the client side and the server side need additional refinements with regard to validation, error handling, messaging and a number of other areas. While features will continue to be improved over time, the primary aim of this project is to implement things conceptually and show potential starting points to solving various problems encountered in client side application development. (So please don't just change a couple class names and ship it off it a client). Also, I make no grandiose claims about being a Kung Fu master at coming up with the greatest possible solution for everything using any of the frameworks demonstrated. So, as mentioned above, if have any suggestions for better ways to handle different components of this application, please feel free to offer them up. 
-
-### Setting Up
-
-This project uses Node.js as a both a server and a REST API. You will want to install the dependencies for the project by running the following command in a terminal or command window... 
+Este proyecto usa Node.js como servidor y REST API. Para instalar las dependencias del proyecto, ejecutar el siguiente comando en la terminal.
 
 ```
 $ npm install 
 ```
 
-This will pull down all the project dependencies and put them in a "node_modules" folder.
+Esto eliminará todas las dependencias del proyecto y las colocará en una carpeta "node_modules".
 
-#### Config Files
+#### Archivos de configuración
 
-You'll want to configure your to set your database settings so that you can properly establish a database connection and save your data. The database connection object is in the /utilities/SQL.js file. See below for an example...
+Querrá configurar su configuración de base de datos para que pueda establecer correctamente una conexión a la base de datos y guardar sus datos. El objeto de conexión de la base de datos está en el archivo /utilities/SQL.js. Vea a continuación un ejemplo:
 
 ```javascript
 var connection = mysql.createConnection({
@@ -47,22 +37,20 @@ var connection = mysql.createConnection({
 });
 ```
 
-Change any of the properties that you need to change there for your environment. We'll create the database in the next section.
+Puede cambiar cualquier propiedad segun tu entorno. A continuación se crear la base de datos.
 
-#### Database Setup
+#### Configuración Base de Datos
 
-As an example, on my server I created the database named 'recipebook.' You can name your database whatever you want, you just need to be sure to set the name of the database in your connection object as was shown above.
-
-The easiest thing to do after this would probably be to just import the recipebook.sql file found in the "sql" directory into the database. This file pre-populates the database with a single user with the login...
+La más facil que puede hacer es importar el archivo recipebook.sql encontrado en el directorio "sql" a la base de datos. Este archivo rellena previamente la base de datos con un único usuario con el inicio de sesión...
 
 ```javascript
 username: demo
 password: demo
 ```
 
-So you can just sign in with those credentials right away. There are also a couple of sample recipes created under this user as well.
+Así que puedes iniciar sesión con esas credenciales de inmediato. También hay un par de recetas de muestra creadas con este usuario.
 
-But if you want to start from scratch or do things manually, the following SQL should do it for you...
+Pero si desea comenzar desde cero o hacer las cosas manualmente, el siguiente SQL debería hacerlo por usted.
 
 Recipes Table:
 
@@ -109,14 +97,14 @@ CREATE TABLE `users` (
 )
 ```
 
-To create a user account, go to the "Sign Up" section when you run the application. Look for a link in the top right hand corner...
+Para crear una cuenta de usuario, vaya a la sección "Registrarse" cuando ejecute la aplicación. Busque un enlace en la esquina superior derecha.
 
-#### Running the Project
+#### Correr el Proyecto
 
-To run the server/project simply run the following in a terminal/command window...
+Para ejecutar el servidor/proyecto simplemente ejecute lo siguiente en una terminal/ventana de comandos.
 
 ```
 $ node server
 ```
 
-This will start the server and run the project at http://localhost:8080. Go to that URL to view the home page. From there you can navigate to the different applications.
+Esto iniciará el servidor y ejecutará el proyecto en http://localhost:8080. Vaya a esa URL para ver la página de inicio. Desde allí podrás navegar a las diferentes aplicaciones.

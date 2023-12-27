@@ -1,23 +1,43 @@
 
 S
-#tests/functional/enterReact.spec.js,a/8/a86d5633ed2ecd8fb59539504d9fd7ddc323ca66
+#tests/functional/enterReact.spec.js,a\8\a86d5633ed2ecd8fb59539504d9fd7ddc323ca66
 A
-webpack.config.js,d/5/d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
+webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
 9
-	server.js,d/c/dc60ea9ee1ff6246bf342463277d5b914db2883d
+	server.js,d\c\dc60ea9ee1ff6246bf342463277d5b914db2883d
 <
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 @
-utilities/SQL.js,6/6/66b0b795635075f16483e50b7552f3c75e8c74ad
+utilities/SQL.js,6\6\66b0b795635075f16483e50b7552f3c75e8c74ad
 G
-utilities/Middleware.js,1/3/13d389854b1296082df8daac1b3af2bacb61381b
+utilities/Middleware.js,1\3\13d389854b1296082df8daac1b3af2bacb61381b
 K
-utilities/Authentication.js,e/d/ed00537818c8b9eac079d3409a8958d7da19cf63
+utilities/Authentication.js,e\d\ed00537818c8b9eac079d3409a8958d7da19cf63
 S
-#tests/unit/Authentification.test.js,d/b/dbc865a01db4c243dd46e79b0e8897eeb2bfdcce
+#tests/unit/Authentification.test.js,d\b\dbc865a01db4c243dd46e79b0e8897eeb2bfdcce
 >
 jest.config.js,8/8/881d5d47bdc17ef8facebef59b68b5fc099a0293
 B
 sql/recipebook.sql,a/9/a992944ea4ba2675ef4a2c3a2524ba403fc05bdd
 ;
-Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
+Jenkinsfile,0\c\0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+C
+react/src/Config.js,1\6\16ac8994328496b73e0de9ab1281969cb219068b
+@
+react/src/App.js,2\8\28abf8883afd48782ee2c065f732ab615787f29a
+A
+react/src/Main.js,2\0\203ec15b6a607dc28d77715c35ff9c9db2d562e3
+U
+%react/src/utilities/Authentication.js,7\e\7e5b60648b996a7b7a96e940037f7662a127a7c4
+W
+'react/src/components/pages/AboutPage.js,e\1\e18af545e3f0377c86587efa5fa6ddef66e9d30a
+V
+&react/src/components/pages/HomePage.js,e\5\e57a5859c59210107f9969868e1eef95cd4ed802
+[
++react/src/components/pages/RecipeAddPage.js,b\f\bf5e287d00e97c2fa819ed3c81fcc01a0e04d491
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

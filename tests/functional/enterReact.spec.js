@@ -35,7 +35,7 @@ describe('EnterReact', function() {
         throw new Error('El controlador no está definido.');
       }
 
-      await driver.get("http://localhost:8080/");
+      await driver.get("http://localhost:8090/");
       await driver.manage().window().setRect({ width: 782, height: 872 });
       await driver.findElement(By.linkText("React")).click();
       // No es necesario llamar a driver.quit() aquí, ya que se maneja en el afterEach

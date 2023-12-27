@@ -1,7 +1,17 @@
-Recipe Book
+Libro de Recetas
 ==========
 
-An experimental exercise client-side/single page application built with JavaScript, MySQL and [Node.js](http://www.nodejs.org) (as both a server and a REST API). This project aims to come up with some possible methods of tackling some of the more involved components used when creating client-side applications (e.g. user authentication, authorization, sign-in and sign-out, error handling, notifications, and relational data). As a result, if you happen to have any suggestions for better ways to handle different components of this application, please feel free to offer up any potential solutions for discussion.
+Una página web construida con JavaScript, MySQL y [Node.js](http://www.nodejs.org) (como servidor y REST API). Este proyecto tiene dos objetivos.
+1. El primero idear algunos métodos posibles para abordar algunos de los componentes más complicados que se utilizan al crear aplicaciones del lado del cliente (por ejemplo, autenticación de usuario, autorización, inicio y cierre de sesión, manejo de errores, notificaciones y datos relacionales).
+2. El segundo es construir un pipeline de CI/CD para desarrollar o evolucionar nuestra aplicación web de software con las siguientes características:
+    • Interfaz gráfica de usuario (cualquier lenguaje de programación, biblioteca o framework);
+    • Base de datos (MySql, SQLite, MongoDB, Neo4J u otro).
+    • Patrones/Estilos de arquitectura.
+    • Prácticas de desarrollo de software:
+        - Domain-driven Design (DDD)
+        - Estilos y Convenciones de codificación,
+        - Codificación Limpia (Clean Code)
+        - Principios SOLID.
 
 Current libraries demonstrated...
 

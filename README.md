@@ -1,31 +1,22 @@
 Recipe Book
 ==========
 
-An experimental exercise client-side/single page application built with JavaScript, MySQL and [Node.js](http://www.nodejs.org) (as both a server and a REST API). This project aims to come up with some possible methods of tackling some of the more involved components used when creating client-side applications (e.g. user authentication, authorization, sign-in and sign-out, error handling, notifications, and relational data). As a result, if you happen to have any suggestions for better ways to handle different components of this application, please feel free to offer up any potential solutions for discussion.
+Un ejercicio experimental de aplicación cliente/simple página construida con JavaScript, MySQL y [Node.js](http://www.nodejs.org) (como servidor y como API REST). El objetivo de este proyecto es idear algunos métodos posibles para abordar algunos de los componentes más complicados que se utilizan al crear aplicaciones del lado del cliente (por ejemplo, autenticación de usuarios, autorización, inicio y cierre de sesión, gestión de errores, notificaciones y datos relacionales). Por lo tanto, si tienes alguna sugerencia para mejorar el manejo de los diferentes componentes de esta aplicación, por favor, no dudes en ofrecer cualquier solución potencial para su discusión.
 
-Current libraries demonstrated...
-
-* [Backbone.js](http://backbonejs.org/)
-* [AngularJS 1](http://angularjs.org/)
+Librería aplicada
 * [React](https://facebook.github.io/react/)
 
-Perhaps more will be used in the future...
+### Instalar
 
-**Disclaimer:** At present, not all of this code is 100% production ready (far from it actually, lol). Both the client side and the server side need additional refinements with regard to validation, error handling, messaging and a number of other areas. While features will continue to be improved over time, the primary aim of this project is to implement things conceptually and show potential starting points to solving various problems encountered in client side application development. (So please don't just change a couple class names and ship it off it a client). Also, I make no grandiose claims about being a Kung Fu master at coming up with the greatest possible solution for everything using any of the frameworks demonstrated. So, as mentioned above, if have any suggestions for better ways to handle different components of this application, please feel free to offer them up. 
-
-### Setting Up
-
-This project uses Node.js as a both a server and a REST API. You will want to install the dependencies for the project by running the following command in a terminal or command window... 
-
+Este proyecto utiliza Node.js como servidor y como API REST. Usted querrá instalar las dependencias para el proyecto ejecutando el siguiente comando en un terminal o ventana de comandos... 
 ```
 $ npm install 
 ```
 
-This will pull down all the project dependencies and put them in a "node_modules" folder.
+Esto pondrá todas las dependencias del proyecto y las pondrá en una carpeta "node_modules".
+#### Configurar base de datos
 
-#### Config Files
-
-You'll want to configure your to set your database settings so that you can properly establish a database connection and save your data. The database connection object is in the /utilities/SQL.js file. See below for an example...
+Usted querrá configurar su para establecer la configuración de su base de datos para que pueda establecer correctamente una conexión de base de datos y guardar sus datos. El objeto de conexión a la base de datos se encuentra en el archivo /utilities/SQL.js. Vea a continuación un ejemplo...
 
 ```javascript
 var connection = mysql.createConnection({
@@ -37,76 +28,89 @@ var connection = mysql.createConnection({
 });
 ```
 
-Change any of the properties that you need to change there for your environment. We'll create the database in the next section.
+#### Database
 
-#### Database Setup
+Como ejemplo, en mi servidor he creado la base de datos llamada 'recipebook'. Puedes nombrar tu base de datos como quieras, sólo necesitas asegurarte de establecer el nombre de la base de datos en tu objeto de conexión como se mostró anteriormente.
 
-As an example, on my server I created the database named 'recipebook.' You can name your database whatever you want, you just need to be sure to set the name of the database in your connection object as was shown above.
-
-The easiest thing to do after this would probably be to just import the recipebook.sql file found in the "sql" directory into the database. This file pre-populates the database with a single user with the login...
+Lo más sencillo sería importar el archivo recipebook.sql que se encuentra en el directorio "sql" a la base de datos. Este archivo prepobla la base de datos con un solo usuario con el login...
 
 ```javascript
 username: demo
 password: demo
 ```
 
-So you can just sign in with those credentials right away. There are also a couple of sample recipes created under this user as well.
-
-But if you want to start from scratch or do things manually, the following SQL should do it for you...
-
-Recipes Table:
-
-```sql
-CREATE TABLE `recipes` (
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(11) NOT NULL,
-    name VARCHAR(255) COLLATE utf8_general_ci NOT NULL,
-    UNIQUE KEY id (id)
-)
-```
-
-Ingredients Table:
-
-```sql
-CREATE TABLE `ingredients` (
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    recipe_id INT(11) NOT NULL,
-    name VARCHAR(255) COLLATE utf8_general_ci NOT NULL,
-    UNIQUE KEY id (id)
-)
-```
-
-Directions Table:
-
-```sql
-CREATE TABLE `directions` (
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    recipe_id INT(11) NOT NULL,
-    name TEXT COLLATE utf8_general_ci NOT NULL,
-    UNIQUE KEY id (id)
-)
-```
-
-Users Table:
-
-```sql
-CREATE TABLE `users` (
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) COLLATE utf8_general_ci NOT NULL,
-    password VARCHAR(255) COLLATE utf8_general_ci NOT NULL,
-    avatar VARCHAR(255) COLLATE utf8_general_ci NOT NULL,
-    UNIQUE KEY id (id)
-)
-```
-
-To create a user account, go to the "Sign Up" section when you run the application. Look for a link in the top right hand corner...
-
-#### Running the Project
-
-To run the server/project simply run the following in a terminal/command window...
+#### Ejecucion
+Solo debe d eejecutar el siguiente comando:
 
 ```
 $ node server
 ```
 
-This will start the server and run the project at http://localhost:8080. Go to that URL to view the home page. From there you can navigate to the different applications.
+Esto iniciará el servidor y ejecutará el proyecto en http://localhost:8080. Vaya a esa URL para ver la página de inicio. Desde allí puedes navegar a las diferentes aplicaciones.
+## IMPLEMENTACIONES (pipeline)
+### Construcion Automatica
+Se realizó haciendo uso de npm en pipeline y webpack desde ejecución manual.
+```
+    stages {
+        stage('Checkout') {
+            steps {
+                 git branch: 'feature_antony', url: 'https://github.com/RRodriguezPumacayo/Ingenieria-Software-2-ProyectoFinal.git'
+            }
+        }
+
+        stage('Build') {
+            steps{
+                bat 'npm install'
+            }
+        }
+}
+```
+### Analisis Estatico de Codigo Fuente
+Se hizo uso de SonarLint para la verificación continua y de SonarQube para la integración con pipeline.
+```
+stage('SonarQube analysis') {
+            steps {
+                script {
+                    withSonarQubeEnv('sonarserver') {
+                        // Ejecuta el análisis de SonarQube
+                        bat "${SONARQUBE_SCANNER_HOME}/bin/sonar-scanner"
+                    }
+                }
+            }
+        }
+```
+[![image.png](https://i.postimg.cc/nV18yvGp/image.png)](https://postimg.cc/RqqbfJYD)
+
+
+### Pruebas Unitarias: Jest
+```
+        stage('Pruebas Unitarias'){
+            steps{
+                bat 'npm run test:unit'
+            }
+        }
+```
+Adicionalmentese requiere configurar la ruta en jest.config.js
+```
+// jest.config.js
+module.exports = {
+    testMatch: ["C:/Users/anton/.jenkins/workspace/IS_II/tests/unit/**/*.js"],
+    //testMatch: ["<rootDir>/tests/unit/**/*.js"],
+};
+```
+#### Logout en Jenkins
+[![image.png](https://i.postimg.cc/W476NbWF/image.png)](https://postimg.cc/B8X1NsG4)
+## Sin integracion a Jenkins
+### Pruebas Funcionales: Selenium
+Para ello se realizó una simple prueba de funcionalidad de apertura y carga automatizada de nuestra página web el cual se encuentra en la carpeta /tests/functional. 
+Esta será ejecutada desde comandos:
+```
+npm run test:functional
+```
+[![image.png](https://i.postimg.cc/3JSwTMF8/image.png)](https://postimg.cc/TpbxV4sF)
+### Pruebas de Performance: JMeter
+### Pruebas de Seguridad: OWASP ZAP
+[Reporte](./is_ii.pdf)
+
+
+

@@ -113,3 +113,8 @@ $ node server
 ```
 
 Esto iniciará el servidor y ejecutará el proyecto en http://localhost:8080. Vaya a esa URL para ver la página de inicio. Desde allí podrás navegar a las diferentes aplicaciones.
+
+### Pipeline
+
+Nuestro pipeline en Jenkins Presenta las siguientes etapas.
+a) Construcción Automática
